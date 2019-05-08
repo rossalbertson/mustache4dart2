@@ -1,6 +1,6 @@
 name: mustache4dart2
 version: 0.1.0
-author: Georgios Valotasios <valotas@gmail.com>
+author: Georgios Valotasios (Reconfigured by Ross Albertson) <valotas@gmail.com>
 description: A mustache implementation for the Dart (2.x) language
 homepage: https://github.com/rossalbertson/mustache4dart2
 environment:
