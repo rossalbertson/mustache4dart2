@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:test/test.dart';
-import 'package:mustache4dart/mustache4dart.dart';
-import 'package:mustache4dart/mustache_context.dart';
+import 'package:mustache4dart2/mustache4dart2.dart';
+import 'package:mustache4dart2/mustache_context.dart';
 
 class A {
   final bar = 'bar';
@@ -83,7 +83,7 @@ void main() {
         currentPath = "$currentPath/test";
       }
       final template = new File("$currentPath/lorem-ipsum.txt")
-          .readAsStringSync(encoding: UTF8);
+          .readAsStringSync();
 
       final String out = render(template, {'ma': 'ma'});
       expect(out, template);

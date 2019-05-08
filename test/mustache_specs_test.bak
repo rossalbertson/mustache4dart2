@@ -3,22 +3,22 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:test/test.dart';
-import 'package:mustache4dart/mustache4dart.dart';
+import 'package:mustache4dart2/mustache4dart2.dart';
 
 main() {
   var specs_dir = new Directory('spec/specs');
   specs_dir.listSync().forEach((FileSystemEntity entity) {
     var filename = entity.path;
     if (entity is File && shouldRun(filename)) {
-      var text = entity.readAsStringSync(encoding: UTF8);
+      var text = entity.readAsStringSync();
       _defineGroupFromFile(filename, text);
     }
   });
 }
 
 _defineGroupFromFile(filename, text) {
-  var json = JSON.decode(text);
-  var tests = json['tests'];
+  var j = json.decode(text);
+  var tests = j['tests'];
   filename = filename.substring(filename.lastIndexOf('/') + 1);
   group("Specs of $filename", () {
     //Make sure that we reset the state of the Interpolation - Multiple Calls test

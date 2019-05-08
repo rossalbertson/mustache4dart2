@@ -9,7 +9,7 @@ void main() {
   context_test.main();
   issues_test.main();
   line_test.main();
-  specs_test.main();
+//  specs_test.main();
   general_test.main();
   reflect_test.main();
 }
